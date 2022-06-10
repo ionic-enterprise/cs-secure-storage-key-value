@@ -31,3 +31,37 @@
     align-items: center;
     height: 70vh;
 }
+
+@font-face {
+    font-family: 'Jedi';
+    src: url('./assets/jedi.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+ion-title {
+    font-family: 'Jedi';
+    color: #FFE81F;
+}
+
+ion-tab-bar {
+    // Make the tab bar a little taller
+    min-height: 70px;
+    background-color: #000;
+    border:5px solid #FFE81F;
+    margin:15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 150px 40px 150px 40px;
+
+    box-shadow: rgba(255, 232, 0, 0.5) 0px 0px 170px 22px;
+    padding-top:16px;    
+}
+
+ion-tab-button {
+     min-height: 50px;
+     background-color: transparent;
+ }
+ion-label {
+    font-size: 15px;
+}

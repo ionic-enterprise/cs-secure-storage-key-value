@@ -13,7 +13,7 @@
     </ion-toolbar>
   </ion-header>
 
-  <ion-list>
+  <ion-list class="animate__animated animate__fadeIn">
     <div class="dead-center" [hidden]="people$ | async"><ion-spinner></ion-spinner></div>
     <ion-item *ngFor="let person of people$ | async">
       {{person.name}}

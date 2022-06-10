@@ -13,7 +13,7 @@
     </ion-toolbar>
   </ion-header>
 
-  <ion-list>
+  <ion-list class="animate__animated animate__fadeIn">
     <div class="dead-center" [hidden]="ships$ | async"><ion-spinner></ion-spinner></div>
     <ion-item *ngFor="let ship of ships$ | async">
       {{ship.name}}
