@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      People
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">People</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-list>
+    <div class="dead-center" [hidden]="people$ | async"><ion-spinner></ion-spinner></div>
+    <ion-item *ngFor="let person of people$ | async">
+      {{person.name}}
+    </ion-item>
+  </ion-list>
+  
+</ion-content>

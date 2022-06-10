@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Star Ships
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Star Ships</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-list>
+    <div class="dead-center" [hidden]="ships$ | async"><ion-spinner></ion-spinner></div>
+    <ion-item *ngFor="let ship of ships$ | async">
+      {{ship.name}}
+    </ion-item>
+  </ion-list>
+</ion-content>
