@@ -5,7 +5,12 @@ const config: CapacitorConfig = {
   appName: 'star-wars',
   webDir: 'www',
   bundledWebRuntime: false,
-  backgroundColor: '#000000'
+  backgroundColor: '#000000',
+  plugins: {
+    SplashScreen: {
+      androidScaleType: 'FIT_CENTER'
+    }
+  }
 };
 
 export default config;
