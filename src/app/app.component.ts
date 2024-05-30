@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Capacitor } from '@capacitor/core';
 import { StatusBar, Style } from '@capacitor/status-bar';
 
 @Component({
@@ -8,6 +9,7 @@ import { StatusBar, Style } from '@capacitor/status-bar';
 })
 export class AppComponent {
   constructor() {
-    StatusBar.setStyle({ style: Style.Dark });
+    if(Capacitor.isNativePlatform())
+      StatusBar.setStyle({ style: Style.Dark });
   }
 }
