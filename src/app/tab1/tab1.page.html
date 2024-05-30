@@ -14,10 +14,10 @@
   </ion-header>
 
   <ion-list class="animate__animated animate__fadeIn">
-    <div class="dead-center" [hidden]="people$ | async"><ion-spinner></ion-spinner></div>
+    <div class="dead-center" [class.ion-hide]="people$ | async"><ion-spinner></ion-spinner></div>
     <ion-item *ngFor="let person of people$ | async">
       {{person.name}}
     </ion-item>
   </ion-list>
-  
+
 </ion-content>
